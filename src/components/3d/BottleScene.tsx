@@ -13,7 +13,7 @@ export const BottleScene = ({ scrollProgress }: BottleSceneProps) => {
   return (
     <div className="fixed inset-0 z-10 pointer-events-none">
       <Canvas
-        camera={{ position: [0, 0.8, 6.5], fov: 42 }}
+        camera={{ position: [0, 1, 7], fov: 40 }}
         gl={{ antialias: true, alpha: true }}
         style={{ background: 'transparent' }}
       >
