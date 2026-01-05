@@ -51,11 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom brand colors
-        soda: {
-          orange: "hsl(var(--soda-orange))",
-          coral: "hsl(var(--soda-coral))",
-          amber: "hsl(var(--liquid-amber))",
+        // Custom brand colors - Water theme
+        water: {
+          light: "hsl(var(--water-light))",
+          deep: "hsl(var(--water-deep))",
+          crystal: "hsl(var(--water-crystal))",
         },
         neon: {
           cyan: "hsl(var(--neon-cyan))",
@@ -135,7 +135,7 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-hero": "var(--gradient-hero)",
         "gradient-neon": "var(--gradient-neon)",
-        "gradient-soda": "var(--gradient-soda)",
+        "gradient-water": "var(--gradient-water)",
       },
       boxShadow: {
         "glow-neon": "var(--glow-neon)",

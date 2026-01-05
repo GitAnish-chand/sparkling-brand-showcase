@@ -40,18 +40,18 @@
 
     --radius: 0.75rem;
 
-    /* Custom brand colors */
-    --soda-orange: 25 100% 55%;
-    --soda-coral: 12 100% 60%;
+    /* Custom brand colors - Water theme */
     --neon-cyan: 185 100% 50%;
     --neon-blue: 210 100% 60%;
     --bubble-white: 0 0% 100%;
-    --liquid-amber: 30 100% 45%;
+    --water-light: 195 100% 75%;
+    --water-deep: 200 100% 45%;
+    --water-crystal: 190 80% 85%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(180deg, hsl(220 25% 4%) 0%, hsl(220 30% 8%) 50%, hsl(220 25% 4%) 100%);
     --gradient-neon: linear-gradient(135deg, hsl(var(--neon-cyan)) 0%, hsl(var(--neon-blue)) 100%);
-    --gradient-soda: linear-gradient(180deg, hsl(var(--soda-coral)) 0%, hsl(var(--soda-orange)) 50%, hsl(var(--liquid-amber)) 100%);
+    --gradient-water: linear-gradient(180deg, hsl(var(--water-light)) 0%, hsl(var(--neon-cyan)) 50%, hsl(var(--water-deep)) 100%);
     --gradient-glow: radial-gradient(ellipse at center, hsl(var(--neon-cyan) / 0.3) 0%, transparent 70%);
 
     /* Shadows & Glows */
@@ -145,8 +145,8 @@
     background-clip: text;
   }
 
-  .gradient-text-soda {
-    background: var(--gradient-soda);
+  .gradient-text-water {
+    background: var(--gradient-water);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
