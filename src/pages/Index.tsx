@@ -66,8 +66,8 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-soda-orange animate-pulse" />
-              <h2 className="font-display text-4xl gradient-text">FIZZCRAFT</h2>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-neon-cyan to-water-deep animate-pulse" />
+              <h2 className="font-display text-4xl gradient-text-water">PURELIFE</h2>
               <p className="text-muted-foreground mt-2">Loading Experience...</p>
             </motion.div>
           </motion.div>

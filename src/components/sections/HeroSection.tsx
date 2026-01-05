@@ -5,8 +5,9 @@ export const HeroSection = () => {
     <section className="section-container relative">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/15 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-water-light/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-water-deep/10 rounded-full blur-3xl" />
       </div>
       
       {/* Content */}
@@ -17,8 +18,8 @@ export const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h1 className="font-display text-7xl md:text-9xl lg:text-[12rem] leading-none mb-6">
-            <span className="gradient-text">FIZZ</span>
-            <span className="text-foreground">CRAFT</span>
+            <span className="gradient-text-water">PURE</span>
+            <span className="text-foreground">LIFE</span>
           </h1>
         </motion.div>
         
@@ -28,7 +29,8 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body"
         >
-          Where innovation meets refreshment. Experience the future of craft beverages.
+          Premium mineral water enriched with essential vitamins and minerals. 
+          Experience hydration at its finest.
         </motion.p>
         
         <motion.div
@@ -38,10 +40,10 @@ export const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button className="btn-premium">
-            Explore Our Craft
+            Discover Our Water
           </button>
           <button className="btn-outline-neon">
-            Watch Story
+            View Minerals
           </button>
         </motion.div>
         
