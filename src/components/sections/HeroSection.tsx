@@ -106,11 +106,17 @@ export const HeroSection = ({ setRotationY }: HeroSectionProps) => {
     <section ref={sectionRef} className="section-container relative">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
+<<<<<<< HEAD
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow" />
         <div
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"
           style={{ animationDelay: "1.5s" }}
         />
+=======
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/15 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-water-light/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-water-deep/10 rounded-full blur-3xl" />
+>>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
       </div>
 
       {/* Content */}
@@ -121,8 +127,13 @@ export const HeroSection = ({ setRotationY }: HeroSectionProps) => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h1 className="font-display text-7xl md:text-9xl lg:text-[12rem] leading-none mb-6">
+<<<<<<< HEAD
             <span className="gradient-text">White</span>
             <span className="text-foreground text-glow">up</span>
+=======
+            <span className="gradient-text-dark">PURE</span>
+            <span className="gradient-text-dark">LIFE</span>
+>>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
           </h1>
         </motion.div>
 
@@ -132,9 +143,28 @@ export const HeroSection = ({ setRotationY }: HeroSectionProps) => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body px-4 py-2 rounded-xl bg-black/20 backdrop-blur-sm"
         >
-          Where innovation meets refreshment. Experience the future of craft beverages.
+          Premium mineral water enriched with essential vitamins and minerals. 
+          Experience hydration at its finest.
         </motion.p>
+<<<<<<< HEAD
 
+=======
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <button className="btn-premium">
+            Discover Our Water
+          </button>
+          <button className="btn-outline-neon">
+            View Minerals
+          </button>
+        </motion.div>
+        
+>>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}

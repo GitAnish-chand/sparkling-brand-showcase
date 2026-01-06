@@ -61,14 +61,20 @@ export const CraftSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
+<<<<<<< HEAD
           <span className="text-primary uppercase tracking-[0.3em] text-sm font-semibold mb-4 block   bg-black/20 backdrop-blur-sm text-glow">
             The white Up
+=======
+          <span className="text-neon-cyan uppercase tracking-[0.3em] text-sm font-semibold mb-4 block">
+            Essential Minerals
+>>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
           </span>
 
 
 
 
           <h2 className="font-display text-5xl md:text-7xl mb-6">
+<<<<<<< HEAD
             <span className="text-foreground  bg-black/20 backdrop-blur-sm" >Vitamins &</span>
             <br />
             <span
@@ -91,6 +97,18 @@ export const CraftSection = () => {
           </p>
         </motion.div>
 
+=======
+            <span className="text-foreground">VITAMINS &</span>
+            <br />
+            <span className="gradient-text-water">MINERALS</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Every bottle is enriched with nature's finest minerals and vitamins, 
+            carefully balanced for optimal hydration and wellness.
+          </p>
+        </motion.div>
+        
+>>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {minerals.map((item, index) => (
             <motion.div
@@ -98,10 +116,13 @@ export const CraftSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="glass rounded-2xl p-8 text-center group hover:bg-card/80 transition-all duration-500"
+              className="glass rounded-2xl p-8 group hover:bg-card/80 transition-all duration-500 border border-water-deep/20 hover:border-neon-cyan/40"
             >
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <span className="text-neon-cyan font-display text-xl">{item.amount}</span>
               </div>
               <h3 className="font-display text-xl text-foreground mb-3">
                 {item.title}
@@ -116,7 +137,7 @@ export const CraftSection = () => {
 
       {/* Decorative elements */}
       <div className="absolute left-10 top-1/2 -translate-y-1/2 w-32 h-32 bg-neon-cyan/10 rounded-full blur-3xl" />
-      <div className="absolute right-10 top-1/3 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute right-10 top-1/3 w-48 h-48 bg-water-deep/15 rounded-full blur-3xl" />
     </section>
   );
 };
