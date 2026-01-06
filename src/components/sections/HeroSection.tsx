@@ -18,8 +18,8 @@ export const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h1 className="font-display text-7xl md:text-9xl lg:text-[12rem] leading-none mb-6">
-            <span className="gradient-text-water">PURE</span>
-            <span className="text-foreground">LIFE</span>
+            <span className="gradient-text-dark">PURE</span>
+            <span className="gradient-text-dark">LIFE</span>
           </h1>
         </motion.div>
         
