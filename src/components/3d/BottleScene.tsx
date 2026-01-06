@@ -3,7 +3,6 @@ import { Environment, Float, Sparkles } from '@react-three/drei';
 import { Suspense } from 'react';
 import { WaterBottle } from './WaterBottle';
 import { FizzBubbles } from './FizzBubbles';
-import { WaterSpill } from './WaterSpill';
 
 interface BottleSceneProps {
   scrollProgress: number;
@@ -43,7 +42,6 @@ export const BottleScene = ({ scrollProgress }: BottleSceneProps) => {
           >
             <WaterBottle scrollProgress={scrollProgress} />
             <FizzBubbles scrollProgress={scrollProgress} count={50} />
-            <WaterSpill scrollProgress={scrollProgress} />
           </Float>
           
           {/* Background water-like sparkles */}
