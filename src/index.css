@@ -153,11 +153,14 @@
   }
 
   .gradient-text-dark {
-    background: linear-gradient(135deg, hsl(220 10% 8%) 0%, hsl(220 15% 18%) 25%, hsl(200 20% 12%) 50%, hsl(220 10% 6%) 75%, hsl(210 15% 15%) 100%);
+    background: linear-gradient(135deg, hsl(220 10% 12%) 0%, hsl(220 15% 22%) 25%, hsl(210 20% 18%) 50%, hsl(220 10% 10%) 75%, hsl(210 15% 20%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: drop-shadow(0 0 20px hsl(200 50% 30% / 0.3));
+    filter: 
+      drop-shadow(0 0 10px hsl(220 20% 15% / 0.9))
+      drop-shadow(0 0 30px hsl(220 15% 10% / 0.6))
+      drop-shadow(0 0 60px hsl(220 10% 8% / 0.4));
   }
 
   /* Section styling */
