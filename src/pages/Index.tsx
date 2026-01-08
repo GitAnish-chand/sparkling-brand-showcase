@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BottleScene } from '@/components/3d/BottleScene';
 import { BubbleParticles } from '@/components/effects/BubbleParticles';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { StorySection } from '@/components/sections/StorySection';
@@ -9,8 +8,7 @@ import { VisionSection } from '@/components/sections/VisionSection';
 import { CTASection } from '@/components/sections/CTASection';
 import { useScrollProgress } from '@/hooks/useScrollProgress';
 import { useSoundEffects } from '@/hooks/useSoundEffects';
-import Background3D from '@/components/3d/Background3d';
-
+import Background3D from '@/components/3d/Background3D';
 
 const Index = () => {
   const { scrollProgress } = useScrollProgress();
@@ -69,17 +67,8 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-<<<<<<< HEAD
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-soda-orange animate-pulse" />
-              <div className="flex items-center gap-1">
-                <h2 className="font-display text-4xl gradient-text">WHITE</h2>
-                <h2 className="font-display text-4xl text-foreground text-glow">UP</h2>
-              </div>
-
-=======
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-neon-cyan to-water-deep animate-pulse" />
               <h2 className="font-display text-4xl gradient-text-water">PURELIFE</h2>
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
               <p className="text-muted-foreground mt-2">Loading Experience...</p>
             </motion.div>
           </motion.div>
@@ -115,21 +104,15 @@ const Index = () => {
         />
       </div>
 
-      {/* 3D Bottle Scene - Fixed position */}
-      {/* <BottleScene scrollProgress={scrollProgress} /> */}
-
       {/* Background bubble particles */}
       <BubbleParticles scrollProgress={scrollProgress} />
 
       {/* Scrollable content sections */}
       <div className="relative z-20">
-        {/* <Background3D /> */}
-
         <Background3D rotationY={rotationY} />
 
         {/* Scroll controller */}
         <HeroSection setRotationY={setRotationY} />
-        {/* <HeroSection /> */}
         <StorySection />
         <CraftSection />
         <VisionSection />
