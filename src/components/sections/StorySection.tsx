@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { DifferenceTable } from "./Differencetable";
+import { DifferenceTable } from "./DifferenceTable";
 
 export const StorySection = () => {
   const ref = useRef(null);
@@ -26,16 +26,6 @@ export const StorySection = () => {
               Our Story
             </span>
             <h2 className="font-display text-5xl md:text-7xl mb-6">
-<<<<<<< HEAD
-              <span className="text-foreground">Sourced from </span>
-              <br />
-              <span className="gradient-text-water">Nature</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Deep beneath pristine mountain ranges, our water begins its journey through
-              ancient mineral-rich rock formations. This natural
-              filtration process enriches every drop with essential minerals and vitamins that your body craves
-=======
               <span className="text-foreground">SOURCED FROM</span>
               <br />
               <span className="gradient-text-water">NATURE</span>
@@ -44,7 +34,6 @@ export const StorySection = () => {
               Deep beneath pristine mountain ranges, our water begins its journey through 
               ancient mineral-rich rock formations. This natural filtration process enriches 
               every drop with essential minerals and vitamins that your body craves.
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
             </p>
             <div className="flex gap-8">
               <div>
@@ -61,34 +50,20 @@ export const StorySection = () => {
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-
-          {/* Right visual placeholder - 3D bottle takes this space */}
-
-          {/* <motion.div
-=======
           
           {/* Right visual placeholder */}
           <motion.div
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative flex justify-end lg:pr-12 xl:pr-24"
           >
-<<<<<<< HEAD
-            <DifferenceTable />
-          </motion.div> */}
-
-
-=======
             <div className="absolute inset-0 bg-gradient-radial from-water-deep/20 via-transparent to-transparent" />
             <div className="glass rounded-3xl p-8 text-center">
               <p className="text-foreground font-display text-2xl">Pure Hydration</p>
               <p className="text-muted-foreground mt-2">Watch the purity flow</p>
             </div>
           </motion.div>
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
         </div>
       </div>
 
@@ -98,21 +73,20 @@ export const StorySection = () => {
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.9, delay: 0.4 }}
         className="
-    absolute
-    top-24
-    right-0
-    hidden
-    lg:block
-    pr-12
-    xl:pr-24
-    z-30
-    max-h-[calc(100vh-8rem)]
-    overflow-y-auto
-  "
+          absolute
+          top-24
+          right-0
+          hidden
+          lg:block
+          pr-12
+          xl:pr-24
+          z-30
+          max-h-[calc(100vh-8rem)]
+          overflow-y-auto
+        "
       >
         <DifferenceTable />
       </motion.div>
-
     </section>
   );
 };

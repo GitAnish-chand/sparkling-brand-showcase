@@ -61,43 +61,11 @@ export const CraftSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-<<<<<<< HEAD
-          <span className="text-primary uppercase tracking-[0.3em] text-sm font-semibold mb-4 block   bg-black/20 backdrop-blur-sm text-glow">
-            The white Up
-=======
           <span className="text-neon-cyan uppercase tracking-[0.3em] text-sm font-semibold mb-4 block">
             Essential Minerals
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
           </span>
 
-
-
-
           <h2 className="font-display text-5xl md:text-7xl mb-6">
-<<<<<<< HEAD
-            <span className="text-foreground  bg-black/20 backdrop-blur-sm" >Vitamins &</span>
-            <br />
-            <span
-              className="gradient-text   bg-black/20 backdrop-blur-sm"
-              style={{
-                WebkitTextStroke: "1px rgba(255,255,255,0.4)",
-              }}
-            >
-              Minerals
-            </span>
-
-
-          </h2>
-          <p 
-          // className="text-muted-foreground text-lg max-w-2xl mx-auto"
-          className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body px-4 py-2 rounded-xl bg-black/20 backdrop-blur-sm"
-          >
-            Every sip is a symphony of carefully curated ingredients,
-            crafted with precision and passion.
-          </p>
-        </motion.div>
-
-=======
             <span className="text-foreground">VITAMINS &</span>
             <br />
             <span className="gradient-text-water">MINERALS</span>
@@ -108,7 +76,6 @@ export const CraftSection = () => {
           </p>
         </motion.div>
         
->>>>>>> 044bfd692a81951bdf99d3050199db6a1b95e641
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {minerals.map((item, index) => (
             <motion.div

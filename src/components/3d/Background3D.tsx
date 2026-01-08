@@ -5,37 +5,25 @@ import * as THREE from "three";
 
 /* ---------------- Bottle Model ---------------- */
 
-const BottleModel: FC = () => {
+interface BottleModelProps {
+  rotationY?: number;
+}
+
+const BottleModel: FC<BottleModelProps> = ({ rotationY = 0 }) => {
   const { scene } = useGLTF("/models/plastic_bottle.glb") as {
     scene: THREE.Group;
   };
-
-  const box = new THREE.Box3().setFromObject(scene);
-
+  const groupRef = useRef<THREE.Group>(null);
 
   useEffect(() => {
-  const box = new THREE.Box3().setFromObject(scene);
-  const center = box.getCenter(new THREE.Vector3());
-  scene.position.sub(center); // 👈 centers model
-}, [scene]);
-
-
-  useEffect(() => {
-    console.log("[Background3D] loaded GLTF scene children:", scene?.children.length);
-    if (!scene) return;
-    console.log(
-      "[Background3D] children names:",
-      scene.children.map((c) => c.name || c.type)
-    );
-
-    // Compute bounding box and add a visible helper so we can see where the model lives
     const box = new THREE.Box3().setFromObject(scene);
-    const size = new THREE.Vector3();
-    box.getSize(size);
-    console.log("[Background3D] bounding box size:", size);
-    
+    const center = box.getCenter(new THREE.Vector3());
+    scene.position.sub(center);
+  }, [scene]);
 
-    // Make meshes double-sided and ensure visibility
+  useEffect(() => {
+    if (!scene) return;
+
     scene.traverse((child) => {
       // @ts-ignore
       if (child.isMesh) {
@@ -52,26 +40,33 @@ const BottleModel: FC = () => {
         child.receiveShadow = true;
       }
     });
-
-    return () => {
-      
-    };
   }, [scene]);
 
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y = rotationY + Math.PI / 4;
+    }
+  });
+
   return (
-    <primitive
-      object={scene}
-      scale={0.1}
-      position={[0, -0.8, 0]}
-      rotation={[0, Math.PI / 4, 0]}
-    />
+    <group ref={groupRef}>
+      <primitive
+        object={scene}
+        scale={0.1}
+        position={[0, -0.8, 0]}
+      />
+    </group>
   );
 };
 
 
 /* ---------------- Background Canvas ---------------- */
 
-const Background3D: FC = () => {
+interface Background3DProps {
+  rotationY?: number;
+}
+
+const Background3D: FC<Background3DProps> = ({ rotationY = 0 }) => {
   return (
     <div
       style={{
@@ -90,9 +85,8 @@ const Background3D: FC = () => {
         <directionalLight position={[5, 5, 5]} intensity={1.2} />
         <Environment preset="studio" />
         <Suspense fallback={null}>
-          <BottleModel />
+          <BottleModel rotationY={rotationY} />
         </Suspense>
-      
       </Canvas>
     </div>
   );
